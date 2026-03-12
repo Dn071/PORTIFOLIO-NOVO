@@ -1,0 +1,263 @@
+/* =======================
+   VARIÁVEIS DE TEMA
+======================= */
+:root {
+  --cor-principal: #00ffcc;
+  --cor-secundaria: #00ccaa;
+
+  --bg-dark: #0f0f0f;
+  --bg-light: #f4f4f4;
+
+  --text-dark: #ffffff;
+  --text-light: #111111;
+}
+
+/* =======================
+   CONFIGURAÇÕES GERAIS
+======================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  background-image: url('fundo-escuro-abstrato-com-ondas-coloridas.jpg');
+  color: var(--text-dark);
+}
+
+/* overlay escuro */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.navbar a,
+#themeToggle {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navbar a:hover {
+  color: var(--cor-principal);
+}
+
+/* =======================
+   SEÇÕES
+======================= */
+.section {
+  padding: 120px 20px;
+}
+
+.center {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =======================
+   TEXTOS
+======================= */
+.portfolio-title {
+  font-size: 2.8rem;
+  color: var(--cor-principal);
+}
+
+.portfolio-title span {
+  color: var(--cor-secundaria);
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--cor-principal);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 25px 0 10px;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* =======================
+   FOTO
+======================= */
+.foto-principal {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  margin: 20px auto;
+  display: block;
+}
+
+/* =======================
+   SKILLS
+======================= */
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.badge {
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.badge.html { background: #e44d26; }
+.badge.css { background: #264de4; }
+.badge.js { background: #f0db4f; color: black; }
+.badge.c { background: #555; }
+.badge.sql { background: darkgreen; }
+
+/* =======================
+   PROJETOS
+======================= */
+.imagem-normal {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--cor-principal);
+  margin: 0 auto 30px;
+  display: block;
+}
+
+/* =======================
+   REDES SOCIAIS
+======================= */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 45px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* =======================
+   BOTÃO TOPO
+======================= */
+#topBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--cor-principal);
+  border: none;
+  border-radius: 50%;
+  padding: 14px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 2000;
+}
+
+/* =======================
+   TEMA CLARO
+======================= */
+body.light {
+  background-image: none;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.light::before {
+  background-color: rgba(255,255,255,0.6);
+}
+
+body.light .navbar {
+  background-color: #ffffff;
+}
+
+body.light a,
+body.light #themeToggle {
+  color: #111;
+}
+
+body.light p {
+  color: #333;
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+/* ===== PROJETOS EM CARD ===== */
+.project {
+  background-color: rgba(0,0,0,0.55);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,255,204,0.45);
+}
+
+.project h3 {
+  color: var(--cor-principal);
+  margin-bottom: 15px;
+}
+
+.project .imagem-normal {
+  transition: transform 0.4s ease;
+}
+
+.project:hover .imagem-normal {
+  transform: scale(1.03);
+}
+
+  
+}
