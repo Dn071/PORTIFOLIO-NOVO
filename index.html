@@ -3,91 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Daniel Oliveira</title>
+  <title>Daniel Oliveira — Dev</title>
   <meta name="description" content="Portfólio de Daniel Oliveira, desenvolvedor em formação em HTML, CSS, JavaScript, C e MySQL.">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<button id="topBtn">⬆</button>
-
-<script src="script.js"></script>
 <body>
 
-  <header>
-    <nav class="navbar" aria-label="Menu principal">
-      <button id="themeToggle">🌙</button>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <span class="nav-logo">DAN.DEV</span>
+    <div class="nav-links">
       <a href="#home">Início</a>
-      <a href="#about">Sobre mim</a>
+      <a href="#about">Sobre</a>
       <a href="#projects">Projetos</a>
-    </nav>
-  </header>
+      <button id="themeToggle">TEMA</button>
+    </div>
+  </nav>
 
-  <section id="home" class="section">
-    <div class="center">
-      <h1 class="portfolio-title">Meu <span>Portfólio</span></h1>
-      <h2>Daniel Oliveira</h2>
-      <h3>Desenvolvedor em formação</h3>
-      <p>
-        Sou um desenvolvedor em formação, com foco em HTML, CSS, JavaScript,
-  Linguagem C e MySQL. Venho construindo meus conhecimentos por meio de
-  projetos práticos, aplicando na prática tudo o que aprendo no dia a dia.
-  Tenho interesse em evoluir constantemente na programação, melhorar minha
-  lógica, escrever códigos mais organizados e desenvolver interfaces cada vez
-  mais funcionais e bem estruturadas.
-
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content fade-in">
+      <p class="hero-tag">Disponível para projetos</p>
+      <h1>
+        Daniel<br>
+        <span class="name">Oliveira<span class="typed-cursor"></span></span>
+      </h1>
+      <p class="hero-role">Desenvolvedor Front-End em Formação</p>
+      <p class="hero-desc">
+        Construindo interfaces funcionais e bem estruturadas com HTML, CSS, JavaScript, Linguagem C e MySQL. Focado em escrever código limpo e criar experiências digitais que fazem sentido.
       </p>
+      <a href="#projects" class="hero-cta">
+        Ver Projetos
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-scroll">
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+        <rect x="1" y="1" width="12" height="18" rx="6" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="7" cy="6" r="1.5" fill="currentColor"/>
+      </svg>
+      SCROLL
     </div>
   </section>
 
-  <section id="about" class="section">
-    <div class="center">
-      <img src="./eu gostoso.png" alt="Foto de Daniel Oliveira" class="foto-principal">
-      <h2>Minhas Habilidades</h2>
-    </div>
-
-    <div class="skills center">
-      <span class="badge html">HTML</span>
-      <span class="badge css">CSS</span>
-      <span class="badge js">JavaScript</span>
-      <span class="badge c">Linguagem C</span>
-      <span class="badge sql">MySQL</span>
-    </div>
-
-    <div class="center">
-      <h2>Redes Sociais</h2>
-      <div class="social-icons">
-        <a href="https://github.com/Dn071" target="_blank" aria-label="GitHub de Daniel Oliveira">
-          <img src="./github.png" alt="GitHub">
-        </a>
-        <a href="https://www.instagram.com/dnsllv71/" target="_blank" aria-label="Instagram de Daniel Oliveira">
-          <img src="./174855.png" alt="Instagram">
-        </a>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-photo-wrap fade-in">
+        <img src="eu gostoso.png" alt="Daniel Oliveira" class="about-photo">
+        <div class="about-photo-border"></div>
+        <div class="about-photo-tag">Daniel Oliveira</div>
+      </div>
+      <div class="about-text fade-in">
+        <p class="section-label">Sobre mim</p>
+        <h2 class="section-title">Dev em<br><em>formação</em></h2>
+        <p>
+          Sou um desenvolvedor em formação, apaixonado por criar interfaces que unem estética e funcionalidade. Venho construindo meus conhecimentos por meio de projetos práticos e tenho interesse genuíno em evoluir na programação, melhorar minha lógica e escrever código cada vez mais organizado.
+        </p>
+        <div class="skills-grid">
+          <span class="skill-pill html"><span class="skill-dot"></span>HTML</span>
+          <span class="skill-pill css"><span class="skill-dot"></span>CSS</span>
+          <span class="skill-pill js"><span class="skill-dot"></span>JavaScript</span>
+          <span class="skill-pill c"><span class="skill-dot"></span>Linguagem C</span>
+          <span class="skill-pill sql"><span class="skill-dot"></span>MySQL</span>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/Dn071" target="_blank" class="social-btn" aria-label="GitHub">
+            <img src="github.png" alt="GitHub">
+            GitHub
+          </a>
+          <a href="https://www.instagram.com/dnsllv71/" target="_blank" class="social-btn" aria-label="Instagram">
+            <img src="174855.png" alt="Instagram">
+            Instagram
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-<section id="projects" class="section">
-  <div class="center">
-
-    <div class="project">
-      <h3>TechFuture Summit 2025</h3>
-      <img src="./tech.jpg" alt="Projeto 1" class="imagem-normal">
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-container">
+      <p class="section-label fade-in">Trabalhos</p>
+      <h2 class="section-title fade-in">Projetos<br><em>Recentes</em></h2>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <img src="tech.jpg" alt="TechFuture Summit 2025" class="project-img">
+          <a href="#" class="project-hover-link" aria-label="Ver projeto">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="project-info">
+            <p class="project-num">01 —</p>
+            <p class="project-title">TechFuture Summit 2025</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card fade-in">
+          <img src="vitoria.png" alt="Site do Vitória" class="project-img">
+          <a href="#" class="project-hover-link" aria-label="Ver projeto">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="project-info">
+            <p class="project-num">02 —</p>
+            <p class="project-title">Esporte Clube Vitória</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Site do Vitória</h3>
-      <img src="./vitoria.png" alt="Projeto 2" class="imagem-normal">
-    </div>
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Daniel <span>Oliveira</span></p>
+    <p class="footer-copy">© 2025 — Desenvolvedor em Formação</p>
+  </footer>
 
-  </div>
-</section>
+  <!-- TOP BTN -->
+  <button id="topBtn" aria-label="Voltar ao topo">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
-
-
-
-
-
-
-
+  <script src="script.js"></script>
 </body>
 </html>
