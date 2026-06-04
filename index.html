@@ -4,43 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Oliveira — Dev</title>
-  <meta name="description" content="Portfólio de Daniel Oliveira, desenvolvedor em formação em HTML, CSS, JavaScript, C e MySQL.">
+  <meta name="description" content="Portfólio de Daniel Oliveira, desenvolvedor em formação em HTML, CSS, JavaScript, Node.js, Java, C e MySQL.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <span class="nav-logo">DAN.DEV</span>
+    <span class="nav-logo">DAN<span class="logo-dot">.</span>DEV</span>
     <div class="nav-links">
       <a href="#home">Início</a>
       <a href="#about">Sobre</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
       <button id="themeToggle">TEMA</button>
     </div>
+    <button class="nav-mobile-menu" id="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
   <section id="home">
     <div class="hero-bg"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-lines">
+      <div class="h-line-v"></div>
+      <div class="h-line-v"></div>
+      <div class="h-line-v"></div>
+    </div>
     <div class="hero-content fade-in">
-      <p class="hero-tag">Disponível para projetos</p>
+      <p class="hero-tag">
+        <span class="tag-dot"></span>
+        Disponível para projetos
+      </p>
       <h1>
         Daniel<br>
         <span class="name">Oliveira<span class="typed-cursor"></span></span>
       </h1>
-      <p class="hero-role">Desenvolvedor Front-End em Formação</p>
+      <p class="hero-role">Desenvolvedor <span class="role-highlight">Full-Stack</span> em Formação</p>
       <p class="hero-desc">
-        Construindo interfaces funcionais e bem estruturadas com HTML, CSS, JavaScript, Linguagem C e MySQL. Focado em escrever código limpo e criar experiências digitais que fazem sentido.
+        Construindo interfaces funcionais e experiências digitais com HTML, CSS, JavaScript, Node.js, Java, C e MySQL. Focado em código limpo e soluções que fazem sentido.
       </p>
-      <a href="#projects" class="hero-cta">
-        Ver Projetos
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <div class="hero-btns">
+        <a href="#projects" class="hero-cta">
+          Ver Projetos
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contact" class="hero-cta-ghost">Fale comigo</a>
+      </div>
+    </div>
+    <div class="hero-badge fade-in">
+      <div class="badge-ring"></div>
+      <div class="badge-inner">
+        <span class="badge-num">5+</span>
+        <span class="badge-txt">Projetos</span>
+      </div>
     </div>
     <div class="hero-scroll">
       <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
@@ -58,31 +82,236 @@
         <img src="eu gostoso.png" alt="Daniel Oliveira" class="about-photo">
         <div class="about-photo-border"></div>
         <div class="about-photo-tag">Daniel Oliveira</div>
+        <div class="about-photo-accent"></div>
       </div>
       <div class="about-text fade-in">
         <p class="section-label">Sobre mim</p>
         <h2 class="section-title">Dev em<br><em>formação</em></h2>
+
         <p>
-          Sou um desenvolvedor em formação, apaixonado por criar interfaces que unem estética e funcionalidade. Venho construindo meus conhecimentos por meio de projetos práticos e tenho interesse genuíno em evoluir na programação, melhorar minha lógica e escrever código cada vez mais organizado.
+          Em 2024 dei o primeiro passo na programação ingressando num curso de desenvolvimento — e desde então não parei mais. Comecei do zero, aprendendo a lógica por trás do código com a <strong style="color:var(--accent)">Linguagem C</strong>, estruturas de dados com <strong style="color:var(--accent)">MySQL</strong>, e logo evoluí para o universo web com <strong style="color:var(--accent)">HTML, CSS e JavaScript</strong>.
         </p>
-        <div class="skills-grid">
-          <span class="skill-pill html"><span class="skill-dot"></span>HTML</span>
-          <span class="skill-pill css"><span class="skill-dot"></span>CSS</span>
-          <span class="skill-pill js"><span class="skill-dot"></span>JavaScript</span>
-          <span class="skill-pill c"><span class="skill-dot"></span>Linguagem C</span>
-          <span class="skill-pill sql"><span class="skill-dot"></span>MySQL</span>
+        <p>
+          Ao longo da jornada, fui construindo projetos reais: landing pages, lojas virtuais, sites institucionais e interfaces interativas. Cada projeto foi uma oportunidade de aprender mais, refinar o código e entender melhor como entregar uma experiência digital de qualidade.
+        </p>
+        <p>
+          Hoje expando minha atuação para o back-end com <strong style="color:var(--accent)">Node.js</strong> e <strong style="color:var(--accent)">Java</strong>, construindo APIs e lógica de servidor — o que me posiciona cada vez mais perto de trabalhar com o stack completo de uma aplicação. Gosto de código limpo, design com propósito e de transformar ideias em produtos reais.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">2024</span>
+            <span class="stat-label">Início da carreira</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Projetos entregues</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Tecnologias</span>
+          </div>
         </div>
+
         <div class="social-row">
-          <a href="https://github.com/Dn071" target="_blank" class="social-btn" aria-label="GitHub">
-            <img src="github.png" alt="GitHub">
-            GitHub
+          <a href="https://github.com/Dn071" target="_blank" class="social-btn">
+            <img src="github.png" alt="GitHub">GitHub
           </a>
-          <a href="https://www.instagram.com/dnsllv71/" target="_blank" class="social-btn" aria-label="Instagram">
-            <img src="174855.png" alt="Instagram">
-            Instagram
+          <a href="https://www.instagram.com/dnsllv71/" target="_blank" class="social-btn">
+            <img src="174855.png" alt="Instagram">Instagram
+          </a>
+          <a href="https://wa.me/5571999756607" target="_blank" class="social-btn social-btn-whatsapp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
           </a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="skills-container">
+      <p class="section-label fade-in">Tecnologias</p>
+      <h2 class="section-title fade-in">Minhas<br><em>Habilidades</em></h2>
+
+      <div class="skills-mega-grid">
+
+        <!-- FRONT-END -->
+        <div class="skill-category fade-in">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div>
+              <p class="skill-cat-label">01</p>
+              <h3 class="skill-cat-title">Front-End</h3>
+            </div>
+          </div>
+          <p class="skill-cat-desc">Construção de interfaces web responsivas, estilizadas e interativas com foco em experiência do usuário.</p>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">HTML5</span>
+                <span class="skill-bar-pct">85%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="85" style="--clr:#e44d26"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">CSS3</span>
+                <span class="skill-bar-pct">80%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80" style="--clr:#264de4"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">JavaScript</span>
+                <span class="skill-bar-pct">65%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="65" style="--clr:#f0db4f"></div></div>
+            </div>
+          </div>
+          <div class="skill-tags-row">
+            <span class="stag">HTML</span>
+            <span class="stag">CSS</span>
+            <span class="stag">JavaScript</span>
+            <span class="stag">Responsivo</span>
+            <span class="stag">UI Design</span>
+          </div>
+        </div>
+
+        <!-- BACK-END -->
+        <div class="skill-category fade-in">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <p class="skill-cat-label">02</p>
+              <h3 class="skill-cat-title">Back-End</h3>
+            </div>
+          </div>
+          <p class="skill-cat-desc">Construção de APIs, lógica de servidor e integração com banco de dados para aplicações completas.</p>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Node.js</span>
+                <span class="skill-bar-pct">55%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="55" style="--clr:#3fb950"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Java</span>
+                <span class="skill-bar-pct">45%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="45" style="--clr:#f89820"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">MySQL</span>
+                <span class="skill-bar-pct">60%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="60" style="--clr:#00a651"></div></div>
+            </div>
+          </div>
+          <div class="skill-tags-row">
+            <span class="stag">Node.js</span>
+            <span class="stag">Java</span>
+            <span class="stag">MySQL</span>
+            <span class="stag">APIs REST</span>
+            <span class="stag">Servidor</span>
+          </div>
+        </div>
+
+        <!-- OUTROS -->
+        <div class="skill-category fade-in">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <p class="skill-cat-label">03</p>
+              <h3 class="skill-cat-title">Base & Ferramentas</h3>
+            </div>
+          </div>
+          <p class="skill-cat-desc">Fundamentos da computação e ferramentas do dia a dia que formam a base de um bom desenvolvedor.</p>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Linguagem C</span>
+                <span class="skill-bar-pct">60%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="60" style="--clr:#9b59b6"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Git & GitHub</span>
+                <span class="skill-bar-pct">65%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="65" style="--clr:#e63329"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Lógica de Programação</span>
+                <span class="skill-bar-pct">75%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="75" style="--clr:#aaa"></div></div>
+            </div>
+          </div>
+          <div class="skill-tags-row">
+            <span class="stag">Linguagem C</span>
+            <span class="stag">Git</span>
+            <span class="stag">GitHub</span>
+            <span class="stag">VS Code</span>
+            <span class="stag">Lógica</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="timeline fade-in">
+        <p class="section-label" style="margin-bottom:40px">Trajetória</p>
+        <div class="timeline-items">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2024</span>
+              <h4 class="tl-title">Início do curso de desenvolvimento</h4>
+              <p class="tl-desc">Primeiros passos com lógica de programação e Linguagem C. Fundamentos que moldaram meu raciocínio como dev.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2024</span>
+              <h4 class="tl-title">Entrada no universo web</h4>
+              <p class="tl-desc">HTML, CSS e JavaScript — primeiras interfaces construídas, primeiros projetos entregues. A paixão pelo front-end se consolida.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2025</span>
+              <h4 class="tl-title">Expansão para back-end</h4>
+              <p class="tl-desc">Node.js e Java começam a fazer parte do repertório. Banco de dados com MySQL e construção de APIs para fechar o ciclo full-stack.</p>
+            </div>
+          </div>
+          <div class="tl-item tl-item-active">
+            <div class="tl-dot tl-dot-active"></div>
+            <div class="tl-content">
+              <span class="tl-year">Agora</span>
+              <h4 class="tl-title">Construindo portfólio e buscando oportunidades</h4>
+              <p class="tl-desc">Projetos reais, código cada vez mais organizado e uma visão cada vez mais clara do dev que quero me tornar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -92,84 +321,138 @@
       <p class="section-label fade-in">Trabalhos</p>
       <h2 class="section-title fade-in">Projetos<br><em>Recentes</em></h2>
       <div class="projects-grid">
+
         <div class="project-card fade-in">
           <img src="tech.jpg" alt="TechFuture Summit 2025" class="project-img">
-          <a href="#" class="project-hover-link" aria-label="Ver projeto">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <a href="#" class="project-hover-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="project-info">
             <p class="project-num">01 —</p>
             <p class="project-title">TechFuture Summit 2025</p>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JS</span>
-            </div>
+            <p class="project-desc">Landing page para evento de tecnologia com formulário de inscrição e palestrantes.</p>
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
           </div>
         </div>
+
         <div class="project-card fade-in">
           <img src="vitoria.png" alt="Site do Vitória" class="project-img">
-          <a href="#" class="project-hover-link" aria-label="Ver projeto">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <a href="#" class="project-hover-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="project-info">
             <p class="project-num">02 —</p>
             <p class="project-title">Esporte Clube Vitória</p>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-            </div>
+            <p class="project-desc">Página informativa sobre o clube baiano com história, conquistas e galeria.</p>
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span></div>
           </div>
         </div>
-          <div class="project-card fade-in">
+
+        <div class="project-card fade-in">
           <img src="image.png" alt="TrendStyle" class="project-img">
-          <a href="#" class="project-hover-link" aria-label="Ver projeto">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <a href="#" class="project-hover-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="project-info">
             <p class="project-num">03 —</p>
             <p class="project-title">TrendStyle</p>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JS</span>
-            </div>
+            <p class="project-desc">Loja virtual de moda com catálogo de produtos, carrinho e filtros de busca.</p>
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
           </div>
         </div>
+
         <div class="project-card fade-in">
-          <img src="image tela de login.png" alt="TelaLogin" class="project-img">
-          <a href="#" class="project-hover-link" aria-label="Ver projeto">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <img src="image_tela_de_login.png" alt="Tela de Login" class="project-img">
+          <a href="#" class="project-hover-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <div class="project-info">
-            <p class="project-num">03 —</p>
+            <p class="project-num">04 —</p>
             <p class="project-title">Tela de Login</p>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JS</span>
-            </div>
+            <p class="project-desc">Interface de autenticação com visual cyberpunk, validação de campos e toggle de senha.</p>
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span></div>
           </div>
         </div>
+
+        <div class="project-card fade-in project-card-wide">
+          <img src="site-estetica.png" alt="Veronica Beauty" class="project-img">
+          <a href="#" class="project-hover-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="project-info">
+            <p class="project-num">05 —</p>
+            <p class="project-title">Veronica Beauty Studio</p>
+            <p class="project-desc">Site completo para estúdio de beleza em Salvador — BA, com galeria, serviços, avaliações e agendamento.</p>
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span><span class="project-tag new-tag">Novo</span></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-container">
+      <p class="section-label fade-in">Contato</p>
+      <h2 class="section-title fade-in">Vamos<br><em>Conversar?</em></h2>
+      <p class="contact-sub fade-in">Tem um projeto em mente ou quer trocar uma ideia? Me chama em qualquer canal abaixo!</p>
+      <div class="contact-grid fade-in">
+
+        <a href="https://wa.me/5571999756607" target="_blank" class="contact-card contact-card-wpp">
+          <div class="contact-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-platform">WhatsApp</p>
+            <p class="contact-handle">Clique para conversar</p>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <a href="mailto:danieloliveirasilva1905@gmail.com" class="contact-card contact-card-email">
+          <div class="contact-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-platform">E-mail</p>
+            <p class="contact-handle">danieloliveirasilva1905@gmail.com</p>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/daniel-oliveira-aba52b3ab/" target="_blank" class="contact-card contact-card-linkedin">
+          <div class="contact-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-platform">LinkedIn</p>
+            <p class="contact-handle">Daniel Oliveira</p>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <a href="https://github.com/Dn071" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <img src="github.png" alt="GitHub" style="width:26px;height:26px;object-fit:contain;filter:brightness(0) invert(1)">
+          </div>
+          <div class="contact-info">
+            <p class="contact-platform">GitHub</p>
+            <p class="contact-handle">@Dn071</p>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <a href="https://www.instagram.com/dnsllv71/" target="_blank" class="contact-card contact-card-insta">
+          <div class="contact-icon">
+            <img src="174855.png" alt="Instagram" style="width:26px;height:26px;object-fit:contain;">
+          </div>
+          <div class="contact-info">
+            <p class="contact-platform">Instagram</p>
+            <p class="contact-handle">@dnsllv71</p>
+          </div>
+          <svg class="contact-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p class="footer-name">Daniel <span>Oliveira</span></p>
-    <p class="footer-copy">© 2025 — Desenvolvedor em Formação</p>
+    <p class="footer-copy">© 2025 — Desenvolvedor em Formação · Salvador, BA</p>
   </footer>
 
-  
   <button id="topBtn" aria-label="Voltar ao topo">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
       <path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -178,5 +461,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>

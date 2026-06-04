@@ -27,8 +27,23 @@ window.addEventListener('scroll', () => {
 const fades = document.querySelectorAll('.fade-in');
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 fades.forEach(el => io.observe(el));
+
+// Animate skill bars when they enter viewport
+const bars = document.querySelectorAll('.skill-bar-fill');
+const barObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const bar = e.target;
+      const w = bar.getAttribute('data-w');
+      bar.style.setProperty('--target-width', w + '%');
+      setTimeout(() => { bar.style.width = w + '%'; }, 100);
+      barObserver.unobserve(bar);
+    }
+  });
+}, { threshold: 0.3 });
+bars.forEach(b => barObserver.observe(b));
 
 // Theme toggle
 const themeBtn = document.getElementById('themeToggle');
