@@ -45,9 +45,42 @@ const barObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 bars.forEach(b => barObserver.observe(b));
 
-// Theme toggle
-const themeBtn = document.getElementById('themeToggle');
-themeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-  themeBtn.textContent = document.body.classList.contains('light') ? 'ESCURO' : 'TEMA';
+// ── MOBILE MENU ──
+const mobileBtn = document.getElementById('mobileMenu');
+const drawer = document.getElementById('mobileDrawer');
+const overlay = document.getElementById('drawerOverlay');
+
+function openDrawer() {
+  drawer.classList.add('open');
+  overlay.classList.add('open');
+  mobileBtn.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+  mobileBtn.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+mobileBtn.addEventListener('click', () => {
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
 });
+overlay.addEventListener('click', closeDrawer);
+
+// Close drawer when a link is clicked
+document.querySelectorAll('.drawer-link').forEach(link => {
+  link.addEventListener('click', () => {
+    closeDrawer();
+  });
+});
+
+// Theme toggle (desktop + mobile)
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  const isLight = document.body.classList.contains('light');
+  document.getElementById('themeToggle').textContent = isLight ? 'ESCURO' : 'TEMA';
+  document.getElementById('themeToggleMobile').textContent = isLight ? '☀️ Alternar Tema' : '🌙 Alternar Tema';
+}
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+document.getElementById('themeToggleMobile').addEventListener('click', toggleTheme);
