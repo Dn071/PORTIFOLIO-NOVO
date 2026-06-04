@@ -414,24 +414,27 @@ body.light .about-stats { background: #f8f4f4; }
 
 /* ── MOBILE DRAWER ── */
 .mobile-drawer {
-  display: none;
-  position: fixed; top: 0; right: -100%; width: 75%; max-width: 300px; height: 100vh;
+  display: flex;
+  position: fixed; top: 0; right: 0; width: 75%; max-width: 300px; height: 100vh;
   background: var(--bg2);
   border-left: 1px solid var(--border);
   z-index: 1050; padding: 80px 32px 40px;
   flex-direction: column; gap: 0;
-  transition: right 0.35s cubic-bezier(0.16,1,0.3,1);
+  transform: translateX(110%);
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+  visibility: hidden;
 }
-.mobile-drawer.open { right: 0; }
+.mobile-drawer.open { transform: translateX(0); visibility: visible; }
 .mobile-drawer-overlay {
-  display: none;
+  display: block;
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.6);
   z-index: 1040; opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s;
   backdrop-filter: blur(4px);
 }
-.mobile-drawer-overlay.open { opacity: 1; }
+.mobile-drawer-overlay.open { opacity: 1; pointer-events: all; }
 
 .mobile-drawer a, .mobile-drawer button.theme-mobile {
   display: flex; align-items: center; gap: 12px;
@@ -469,8 +472,6 @@ body.light .about-stats { background: #f8f4f4; }
   /* Show hamburger, hide desktop links */
   .nav-mobile-menu { display: flex; }
   .nav-links { display: none; }
-  .mobile-drawer { display: flex; }
-  .mobile-drawer-overlay { display: block; }
 
   nav { padding: 16px 20px; }
 
